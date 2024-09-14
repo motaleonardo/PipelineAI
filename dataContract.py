@@ -10,6 +10,18 @@ class ProdutoEnum (str, Enum):
     produto3 = "ZapFlow com Llama 3.0"
 
 class Vendas(BaseModel):
+    
+    """
+    Modelo de dados para vendas.
+
+    Args:
+        email (EmailStr): email do comprador
+        data (datetime): data da compra
+        valor (PositiveFloat): valor da compra
+        quantidade (PositiveInt): quanditade de produtos compradas
+        produto (ProdutoEnum): categoria do produto
+    """
+
     email: EmailStr
     data: datetime
     valor: PositiveFloat
